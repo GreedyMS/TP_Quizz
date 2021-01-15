@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <script src="js/jQuery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    <title>Quizz</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="pt-3 pb-5">Quizz World</h1>
+        <div id="categoryLevel" class="mb-5" style="display: none;"></div>
+
+        <div id="windowQuizz" style="display: none;">
+            <div id="recapQuizz">
+                <div id="pseudoInfo" class="mb-5"></div>
+                <div id="imageChoice" class="mb-5"></div>
+                <div id="resultat"></div>
+                <div id="btnStartQuizz" class="my-5"></div>
+            </div>
+            <div id="jeuxQuizz" style="display: none;">
+                <div id="question" class="mb-5"></div>
+                <div id="propositions" class="mb-5">
+                      <div id="proposition1"></div>
+                    <div id="proposition2"></div>
+                    <div id="proposition3"></div>
+                    <div id="proposition4"></div>
+                </div>
+                <div id="dropHere" class="mb-3">
+                    <p id="drop" class=" p-5"></p>
+                </div>
+                <div id="anecdote" class="mb-3"></div>
+                <div id="btnNext" class="mb-3"></div>
+            </div>
+        </div>
+
+        <div id="quizz1" class="mx-3">
+            <div class="boxQuizz1 mx-3 px-4">
+                <h2 class="my-3">Application Web</h2>
+                <img src="img/web.jpg" alt="">
+                <div id="inputLabel" class="my-3">
+                    <label for="web"><input type="radio" name="web" value="débutant" title="Application Web">
+                        Débutant</label>
+                    <label for="web"><input type="radio" name="web" value="confirmé" title="Application Web">
+                        Confirmé</label>
+                    <label for="web"><input type="radio" name="web" value="expert" title="Application Web">
+                        Expert</label>
+                </div>
+            </div>
+
+            <div class="boxQuizz1 mx-3 px-4">
+                <h2 class="my-3">Animaux en Chiffres</h2>
+                <img src="img/animauxenchiffres.jpg" alt="">
+                <div id="inputLabel" class="my-3">
+                    <label for="animauxenchiffres"><input type="radio" name="animauxenchiffres" value="débutant"
+                            title="Animaux en Chiffres"> Débutant</label>
+                    <label for="animauxenchiffres"><input type="radio" name="animauxenchiffres" value="confirmé"
+                            title="Animaux en Chiffres"> Confirmé</label>
+                    <label for="animauxenchiffres"><input type="radio" name="animauxenchiffres" value="expert"
+                            title="Animaux en Chiffres"> Expert</label>
+                </div>
+            </div>
+
+            <div class="boxQuizz1 mx-3 px-4">
+                    <h2 class="my-3">Le XXème siècle</h2>
+                <img src="img/dates20.jpg" alt="">
+                <div id="inputLabel" class="my-3">
+                    <label for="dates20"><input type="radio" name="dates20" value="débutant" title="Le XXème siècle">
+                        Débutant</label>
+                    <label for="dates20"><input type="radio" name="dates20" value="confirmé" title="Le XXème siècle">
+                        Confirmé</label>
+                    <label for="dates20"><input type="radio" name="dates20" value="expert" title="Le XXème siècle">
+                        Expert</label>
+                </div>
+            </div>
+
+            <div class="boxQuizz1 mx-3 px-4">
+                <h2 class="my-3">Nintendo</h2>
+                <img src="img/nintendo.jpg" alt="">
+                <div id="inputLabel" class="my-3">
+                    <label for="nintendo"><input type="radio" name="nintendo" value="débutant" title="Nintendo">
+                        Débutant</label>
+                    <label for="nintendo"><input type="radio" name="nintendo" value="confirmé" title="Nintendo">
+                        Confirmé</label>
+                    <label for="nintendo"><input type="radio" name="nintendo" value="expert" title="Nintendo">
+                        Expert</label>
+                </div>
+            </div>
+        </div>
+
+        <div id="quizz2" class="mx-3">
+            <div class="boxQuizz2 mx-3 px-4">
+                <h2 class="my-3">Trouver le nombre</h2>
+                <img src="img/nombres.jpg" alt="">
+                <div id="inputLabel" class="my-3">
+                    <label for="nombres"><input type="radio" name="nombres" value="débutant" title="Trouver le nombre">
+                        Débutant</label>
+                    <label for="nombres"><input type="radio" name="nombres" value="confirmé" title="Trouver le nombre">
+                        Confirmé</label>
+                    <label for="nombres"><input type="radio" name="nombres" value="expert" title="Trouver le nombre">
+                        Expert</label>
+                </div>
+            </div>
+
+            <div class="boxQuizz2 mx-3 px-4">
+                <h2 class="my-3">Microsoft</h2>
+                <img src="img/microsoft.jpg" alt="">
+                <div id="inputLabel" class="my-3">
+                    <label for="microsoft"><input type="radio" name="microsoft" value="débutant" title="Microsoft">
+                        Débutant</label>
+                    <label for="microsoft"><input type="radio" name="microsoft" value="confirmé" title="Microsoft">
+                        Confirmé</label>
+                    <label for="microsoft"><input type="radio" name="microsoft" value="expert" title="Microsoft">
+                        Expert</label>
+                </div>
+            </div>
+
+            <div class="boxQuizz2 mx-3 px-4">
+                <h2 class="my-3">Marques et Slogans</h2>
+                <img src="img/marquesslogans.jpg" alt="">
+                <div id="inputLabel" class="my-3">
+                    <label for="marquesslogans"><input type="radio" name="marquesslogans" value="débutant"
+                            title="Marques et Slogans"> Débutant</label>
+                    <label for="marquesslogans"><input type="radio" name="marquesslogans" value="confirmé"
+                            title="Marques et Slogans"> Confirmé</label>
+                    <label for="marquesslogans"><input type="radio" name="marquesslogans" value="expert"
+                            title="Marques et Slogans"> Expert</label>
+                </div>
+            </div>
+
+            <div class="boxQuizz2 mx-3 px-4">
+                <h2 class="my-3">Méandres d'Internet</h2>
+                <img src="img/internet.jpg" alt="">
+                <div id="inputLabel" class="my-3">
+                    <label for="internet"><input type="radio" name="internet" value="débutant"
+                            title="Méandres d'Internet">
+                        Débutant</label>
+                    <label for="internet"><input type="radio" name="internet" value="confirmé"
+                            title="Méandres d'Internet">
+                        Confirmé</label>
+                    <label for="internet"><input type="radio" name="internet" value="expert"
+                            title="Méandres d'Internet">
+                        Expert</label>
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="modal1" id="modal" aria-hidden="true" role="dialog" aria-labelledby="titre-modal" style="display:none;">
+            <div class="modal-w">
+                <h2 id="titre-modal" class="mx-2"></h2>
+                <p class="mt-2">Quel pseudo voulez-vous utiliser ?</p>
+                <form id="btnModal" class="my-4">
+                    <span class="erreurPseudo"></span>
+                    <input type="text" name="pseudo" class="mx-4" id="pseudoPlayer">
+                    <span>Annuler si vous avez changer d'avis.</span>
+                    <div>
+                        <input type="button" id="valider" class="btn btn-warning" value="Valider">
+                        <input type="reset" id="annuler" class="btn btn-danger" value="Annuler">
+                    </div>
+                </form>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>
